@@ -21,30 +21,26 @@
   </head>
   <body>
     <div class="container py-5">
+
       <div>
-        <label for="nome" id="user-age">Nome Cognome</label>
-        <input type="text" name="nome">
+        <label for="km">Km da percorrere</label>
+        <input type="text" name="km" id="user-km" autofocus>
       </div>
 
       <div>
-        <label for="km" id="user-km">Km da percorrere</label>
-        <input type="number" name="km">
-      </div>
-
-      <div>
-        <label for="età" id="user-age">Fascia d'età</label>
-        <select name="età" class="form-select mb-3">
+        <label for="età" >Fascia d'età</label>
+        <select name="età" class="form-select mb-3" id="user-age">
           <option value="">Seleziona</option>
           <option value="minorenne">Minorenne</option>
-          <option value="maggiorenne">Maggiorenne</option>
-          <option value="nb">Non Binario</option>
+          <option value="over-65">Over 65</option>
       </select>
       </div>
 
-      <div class="container">
+      <div>
         <button id="button-genera" class="btn btn-primary">Genera</button>
-        <button id="button-annulla" class="btn btn-primary">Annulla</button>
       </div>
+
+      <div class="ticket-price"></div>
       
     </div>
 

@@ -1,6 +1,39 @@
-const usernameInput = document.getElementById('user-name');
+
 const genderInput = document.getElementById('user-age');
 const kmInput = document.getElementById('user-km');
+const generatore = document.getElementById('button-genera');
+const ticketPrice = document.getElementById('ticket-price');
+
+generatore.addEventListener('click', function(){
+    const km = kmInput.value;
+    console.log(km);
+
+    const age =genderInput.value;
+    console.log(age);
+
+    const priceKm = 0.21;
+    const prezzoBase = km * priceKm;
+    console.log(prezzoBase);
+
+    let discount = 0;
+    if (age == 'minorenne'){
+        discount = 20;
+
+    } else if ( age == 'over-65'){
+        discount = 40;
+
+    } else {
+        console.log(prezzoBase);
+    }
+
+    const discountEur = prezzoBase * discount / 100;
+    console.log(discountEur);
+
+    const finalPrice = prezzoBase - discountEur;
+
+    const priceFinalText = "Il prezzo del tuo biglietto è £" + finalPrice.toFixed(2);
+    console.log(priceFinalText);
+})
 
 
 
